@@ -137,16 +137,16 @@
 
     //   Current Number 
     
-        const targetNumber = 1439301;
-        const initialNumber=1439301
+    
+         
         const date0=new Date("3/4/23");
         const now = new Date();
         var hours = Math.abs(now - date0) / 36e5;
-        var currentNumber = (hours * 157) + targetNumber;
+        const targetNumber = 1439301;
+        const currentNumber = ((hours * 157) + targetNumber).toFixed(0);
+       const currentNumberInt = parseInt(currentNumber); // convert currentNumber to an integer
 
-       
-        
-      
+     
 
 
       // Demo:
@@ -155,7 +155,7 @@
         7,
         true
       );
-      counter.value = currentNumber.toFixed(0);
+      counter.value = currentNumberInt;
       counter.rollTo(100000002, 22930, 300);
     </script>
   </body>
